@@ -1,0 +1,16 @@
+    1  VirtualBox --startvm XP
+    2  quartus
+    3  firefox
+    4  pwd
+    5  -s ls
+    6  ls
+    7  whereis ls
+    8  /bin/ls
+    9  git clone https://github.com/Maussy/RTR105
+   10  pwd
+   11  cd /RTR105
+   12  ls
+   13  cd RTR105/
+   14  ls
+   15  history
+   16  history > history22.txt
