@@ -14,3 +14,46 @@
    14  ls
    15  history
    16  history > history22.txt
+   17  ls -lt
+   18  nani git-upload
+   19  nano git-upload
+   20  ls -lt
+   21  cat git-upload
+   22  git-upload
+   23  /home/user/RTR105/git-upload
+   24  ls -lt
+   25  chmod 764 git-upload
+   26  ls -lt git-upload
+   27  git-
+   28  pwd
+   29  ./git-upload
+   30  cd
+   31  cd RTR105/
+   32  nano git-upload
+   33  ./git-upload
+   34  nano git-upload
+   35  ./git-upload
+   36  nano git-upload
+   37  ./git-upload
+   38  history
+   39  ./git-upload
+   40  nano git-upload
+   41  ./git-upload
+   42  nano git-upload
+   43  cd
+   44  pwd
+   45  rm -rf RTR105/
+   46  ls -lt
+   47  history | grep clne
+   48  history | grep clone
+   49  git clone https://github.com/Maussy/RTR105
+   50  cd RTR105/
+   51  ls -lt
+   52  echo $PATH
+   53  PATH=$PATH:./
+   54* 
+   55  echo $PATH
+   56  git
+   57  echo $PATH
+   58* histor
+   59  history > history22.txt
