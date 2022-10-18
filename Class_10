@@ -1,0 +1,40 @@
+// operacijas:          operands_I    operacija    operands_II
+//                      (datu tips)                 (datu tips)
+//                                       ||
+//                                       \/
+//                               operacijas rezultats
+//                                     (datu tips)
+//operacijas rezultata datu tips ir "lielakais" datu tips, kas tiek izmantots
+// matematiskas +,-,*,/,%,++, --
+//             int i1 = 5, i2 = 6, ir;
+//             ir = i1 + i2;
+//             ir = ir + i2;
+//             ir = ir + 10;
+//             ir += 10; // tas ir tas pats ir= ir +10; tikai kompakti pieraksts
+//             ir++; // ir + ir +1; vai ir += 1;
+//attiecibu: <, >, <=, >=, ==, !=
+//loģiskas: &&, ||
+//loģiskas pa bitiem: &, |, ^, !
+//bitu: >>, <<
+// Ko petit šodien: ka strada operacijas?
+//                  vai operacija drikst izmantot jubkuru datu tipu?
+//                  operaciju izpildišanas seciba? (to pasaka prioritate:
+//                                                  secibas kontrolei izmanto())
+// / (int/int vai char/char), %, &, |, ^, !, &&, ||, <<, >>
+
+#include<stdio.h>
+
+int main()
+{
+char c1 = 'A', c2 = 0x45 ;
+int i1 = 2000, i2 = 01056 ;
+float f1 = 2.3, f2 = -770.895;
+double d1 = -5.6e4, d2 = 456.8e-3;
+printf("\n%d (%ld bytes) * %d (%ld bytes)",c1,sizeof(c1),i1,sizeof(i1));
+printf(" = %d (%ld bytes)\n\n",c1*i1,sizeof(c1*i1));
+
+printf("\n%.lf (%ld bytes) > %.2f (%ld bytes)",f1,sizeof(f1),f2,sizeof(f2));
+printf("%.lf (%ld bytes)\n\n",f1>f2,sizeof(f1>f2));
+
+return 0;
+}
