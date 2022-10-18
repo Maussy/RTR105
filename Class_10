@@ -34,7 +34,7 @@ printf("\n%d (%ld bytes) * %d (%ld bytes)",c1,sizeof(c1),i1,sizeof(i1));
 printf(" = %d (%ld bytes)\n\n",c1*i1,sizeof(c1*i1));
 
 printf("\n%.lf (%ld bytes) > %.2f (%ld bytes)",f1,sizeof(f1),f2,sizeof(f2));
-printf("%.lf (%ld bytes)\n\n",f1>f2,sizeof(f1>f2));
+printf(" = %d (%ld bytes)\n\n",f1>f2,sizeof(f1>f2));
 
 return 0;
 }
