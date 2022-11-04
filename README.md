@@ -6,9 +6,15 @@ Text that is not a quote
 > Text that is a quote
 The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.
  
-
 #include <msp430g2202.h>
+void indication(unsigned char digit12, unsigned char digit34, unsigned char which_digit);
+void display(unsigned char digit);
+void delay(unsigned long ms);
+
 char i;
+unsigned char sekundes = 0;
+unsigned char minutes = 0;
+unsigned char stundas = 0;
 int main(void)
 {
   WDTCTL = WDTPW + WDTHOLD;
@@ -17,15 +23,24 @@ int main(void)
   P1DIR = 0xFF;
   P2DIR = 0xF;
   unsigned char j=0;
+  unsigned int j2=0;
   char digit_position=0;
+
+
   
   for(;;)
-  { j++;
-  if(j>99){
-    j=(j+1)%100;}
+  { 
+    //j++;
+    if(j<99){}
     digit_position=(digit_position+1)%4;
+   indication(minutes, sekundes, digit_position);
+
+    j2++;
+    if (j2==1000){
+      j2 = 0;
+      time_engine(1);
+    }
   
-  indication(j,j,digit_position);
   delay(100);
 }
 }
@@ -60,3 +75,12 @@ void indication(unsigned char digit12, unsigned char digit34, unsigned char whic
   if (which_digit == 3) {P2OUT |= BIT3;display(digit34%10);}
   
 }
+void time_engine(unsigned char time_instant_in_seconds)
+{
+  sekundes = sekundes + time_instant_in_seconds;
+  if (sekundes ==60)
+  {
+    sekundes = 0; minutes++;
+    }
+  }
+
